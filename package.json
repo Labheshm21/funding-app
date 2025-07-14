@@ -4,17 +4,22 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npx hardhat compile",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "lint": "next lint"
   },
   "dependencies": {
-    "hardhat": "^2.25.0",
     "next": "15.3.2",
-    "postcss": "^8.5.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "web3modal": "^1.9.12"
+    "postcss": "^8.5.6",
+    "web3modal": "^1.9.12",
+
+   
+    "hardhat": "^2.25.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "ethers": "^6.15.0"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.9",
@@ -25,15 +30,10 @@
     "@nomicfoundation/hardhat-toolbox": "^6.0.0",
     "@nomicfoundation/hardhat-verify": "^2.0.14",
     "@nomicfoundation/ignition-core": "^0.15.12",
-    "@tailwindcss/postcss": "^4.1.11",
-    "@typechain/ethers-v6": "^0.5.1",
-    "@typechain/hardhat": "^9.1.0",
-    "@types/chai": "^4.3.20",
-    "@types/mocha": "^10.0.10",
     "chai": "^4.5.0",
-    "ethers": "^6.15.0",
     "hardhat-gas-reporter": "^2.3.0",
     "solidity-coverage": "^0.8.16",
+    "@tailwindcss/postcss": "^4.1.11",
     "tailwindcss": "^4.1.11",
     "ts-node": "^10.9.2",
     "typechain": "^8.3.2",
